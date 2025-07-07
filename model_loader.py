@@ -10,6 +10,6 @@ def load_model():
         gdown.download(url, model_path, quiet=False)
     
     with open(model_path, "rb") as f:
-        model = pickle.load(f)
+        model = pickle.loads(f)
     
     return model
