@@ -25,7 +25,7 @@ This is a Streamlit-based web application for **brain tumor classification** usi
 ```
 brain_tumor_app/
 ├── app.py                 # Streamlit app
-├──requirements.txt        # Required libraries
+├── requirements.txt        # Required libraries
 ├── model_loader.py        # Loads trained SVM model
 └── README.md              # Project documentation
 ```
