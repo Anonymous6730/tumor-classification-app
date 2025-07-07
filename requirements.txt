@@ -1,0 +1,7 @@
+kagglehub
+numpy
+pandas
+opencv-python
+scikit-learn
+matplotlib
+glob2
