@@ -58,6 +58,5 @@ if uploaded_file:
         st.markdown(f"""
         <div style="text-align: center;">
             <h2 style="color:#6A5ACD;">✅ Prediction: {CLASSES[class_index]}</h2>
-            <h4>Confidence: <span style="color:green;">{confidence:.2f}%</span></h4>
         </div>
         """, unsafe_allow_html=True)
