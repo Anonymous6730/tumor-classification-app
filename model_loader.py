@@ -9,8 +9,6 @@ def load_model():
     if not os.path.exists(model_path):
         url = "https://drive.google.com/uc?export=download&id=1eZ7v4dQzZ-5JEXi9KFFzDTOzI7w2z_VZ"
         gdown.download(url, model_path, quiet=False)
-    
-    with open(model_path, "rb") as f:
-        model = pickle.load(f)
+        model = brain_tumor_cnn.keras
     
     return model
