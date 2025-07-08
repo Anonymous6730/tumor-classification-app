@@ -2,7 +2,7 @@ kagglehub
 numpy
 pandas
 opencv-python
-scikit-learn==1.5.1
+scikit-learn
 matplotlib
 glob2
 gdown
