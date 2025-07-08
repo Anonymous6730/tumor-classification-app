@@ -1,22 +1,27 @@
-# 🧠 Brain Tumor Classification Web App
+# 🧠 Brain Tumor Classification Web App (CNN-Based)
 
-This is a Streamlit-based web application for **brain tumor classification** using **MRI images**. The model uses a Support Vector Machine (SVM) classifier trained on the Brain MRI Dataset to identify whether a tumor is present and classify it as one of the following:
-
-- **Glioma 🔴**
-- **Meningioma 🟡**
-- **No Tumor 🟢**
-- **Pituitary 🟣**
-
-> ⚠️ *This project is for educational/demo purposes only and not for medical use.*
+This is a **Streamlit-based web application** that classifies brain tumors from MRI images using a **Convolutional Neural Network (CNN)** trained with TensorFlow/Keras.
 
 ---
 
-## 🚀 How It Works
+## 🎯 Features
 
-1. Upload an MRI image (JPG/PNG)
-2. The image is resized to 128×128 and flattened
-3. The SVM model predicts the tumor class
-4. The app shows the predicted label and confidence score
+- Upload MRI images (`.jpg`, `.jpeg`, `.png`)
+- Predicts 4 tumor classes:
+  - **Glioma 🔴**
+  - **Meningioma 🟡**
+  - **No Tumor 🟢**
+  - **Pituitary 🟣**
+- Displays the **predicted tumor type** with a **confidence score**
+- Built with `Streamlit` + `TensorFlow`
+
+---
+
+## 🧠 How the Model Works
+
+- Input image resized to **128×128**
+- Normalized and passed into a **CNN**
+- Model outputs softmax probabilities for 4 classes
 
 ---
 
