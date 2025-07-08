@@ -13,10 +13,9 @@ st.set_page_config(
 
 # ---- LOAD CNN MODEL ----
 @st.cache_resource
-def load_model():
-    return tf.keras.models.load_model("brain_tumor_cnn.keras")
-
-model = load_model()
+with st.spinner("Loading model..."):
+    model = load_model()
+st.success("✅ Model loaded successfully!")
 
 # ---- SIDEBAR ----
 with st.sidebar:
