@@ -12,7 +12,6 @@ st.set_page_config(
 )
 
 # ---- LOAD CNN MODEL ----
-@st.cache_resource
 with st.spinner("Loading model..."):
     model = load_model()
 st.success("✅ Model loaded successfully!")
