@@ -52,9 +52,7 @@ if uploaded_file:
         with st.spinner("Analyzing image..."):
             time.sleep(1)
             processed = preprocess_image(image)
-            proba = model.predict_proba(processed)
-            class_index = int(np.argmax(proba))
-            confidence = float(np.max(proba)) * 100
+            class_index = model.predict(processed)[0]
 
         st.markdown("---")
         st.markdown(f"""
