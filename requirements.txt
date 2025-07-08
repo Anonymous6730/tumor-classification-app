@@ -1,5 +1,4 @@
 kagglehub
-tensorflow
 streamlit
 numpy
 gdown
