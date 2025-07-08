@@ -48,10 +48,8 @@ pip install -r requirements.txt
 **requirements.txt**
 ```
 streamlit
-pillow
+tensorflow
 numpy
-scikit-learn
-gdown
 ```
 
 ---
