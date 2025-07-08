@@ -50,6 +50,7 @@ pip install -r requirements.txt
 streamlit
 tensorflow
 numpy
+gdown
 ```
 
 ---
