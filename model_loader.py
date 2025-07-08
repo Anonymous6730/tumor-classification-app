@@ -1,14 +1,8 @@
 import gdown
-import os
-import pickle
-import streamlit as st
+from tensorflow import keras
 
-@st.cache_resource
-def load_model():
-    model_path = "brain_tumor_cnn.keras"
-    if not os.path.exists(model_path):
-        url = "https://drive.google.com/uc?export=download&id=1eZ7v4dQzZ-5JEXi9KFFzDTOzI7w2z_VZ"
-        gdown.download(url, model_path, quiet=False)
-        model = brain_tumor_cnn.keras
-    
-    return model
+url = https://drive.google.com/uc?export=download&id=1eZ7v4dQzZ-5JEXi9KFFzDTOzI7w2z_VZ
+output = 'brain_tumor_cnn.keras'
+gdown.download(url, output, quiet=False)
+model = keras.models.load_model('brain_tumor_cnn.keras')
+return model
