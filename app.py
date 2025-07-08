@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import time
-from model_loader import load_model
 
 # ---- PAGE CONFIG ----
 st.set_page_config(
