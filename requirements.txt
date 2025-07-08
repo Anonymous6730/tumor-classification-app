@@ -1,8 +1,2 @@
 kagglehub
-numpy
-pandas
-opencv-python
-scikit-learn==1.6.1
-matplotlib
-glob2
-gdown
+tensorflow
