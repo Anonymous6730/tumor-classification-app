@@ -30,8 +30,8 @@ This is a **Streamlit-based web application** that classifies brain tumors from 
 ```
 brain_tumor_app/
 ├── app.py                 # Streamlit app
-├── requirements.txt        # Required libraries
-├── model_loader.py        # Loads trained SVM model
+├── requirements.txt       # Required libraries
+├── brain_tumor_cnn.keras  # Trained CNN model
 └── README.md              # Project documentation
 ```
 
@@ -66,11 +66,17 @@ Then open your browser at [http://localhost:8501](http://localhost:8501)
 
 ---
 
-## 🧪 Model Training Overview
+## 🧪 Model Training (Summary)
 
-- Model: `sklearn.svm.SVC(kernel="poly", probability=True)`
-- Image Size: 128 × 128 RGB
-- Input Features: Flattened (49152)
+- **Framework**: TensorFlow/Keras  
+- **Architecture**:
+  - 2x `Conv2D` + `MaxPooling2D`
+  - Flatten → Dense → Dropout → Softmax
+- **Input Shape**: (128, 128, 3)
+- **Output**: 4-class softmax
+- **Loss Function**: `categorical_crossentropy`
+- **Optimizer**: `adam`
+- **Epochs**: 10 (can be increased)
 - Dataset: Brain Tumor MRI Images  
   [📁 Kaggle Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
 
@@ -79,8 +85,6 @@ Then open your browser at [http://localhost:8501](http://localhost:8501)
 ## 📌 Notes
 
 - Input images must be MRI scans
-- Model was trained on unnormalized pixel values (0–255)
-- Streamlit frontend uses the same preprocessing as training
 
 ---
 
