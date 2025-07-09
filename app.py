@@ -53,7 +53,7 @@ CLASSES = ['Glioma 🔴', 'Meningioma 🟡', 'No Tumor 🟢', 'Pituitary 🟣']
 # ---- IMAGE PREPROCESSING ----
 def preprocess_image(image):
     image = image.convert("L")
-    image = image.resize((128, 128))
+    image = image.resize((128, 128,1))
     arr = np.array(image).astype(np.float32) / 255.0  # Normalization for CNN
     arr = np.expand_dims(arr, axis=-1)
     return arr
