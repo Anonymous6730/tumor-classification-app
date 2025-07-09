@@ -52,12 +52,12 @@ CLASSES = ['Glioma 🔴', 'Meningioma 🟡', 'No Tumor 🟢', 'Pituitary 🟣']
 
 # ---- IMAGE PREPROCESSING ----
 def preprocess_image(image):
-    image = image.convert("L")  # Grayscale
+    image = image.convert("RGB")
     image = image.resize((128, 128))
     arr = np.array(image).astype(np.float32) / 255.0
-    arr = np.expand_dims(arr, axis=-1)  # Shape: (128, 128, 1)
-    arr = np.expand_dims(arr, axis=0)   # Shape: (1, 128, 128, 1)
+    arr = np.expand_dims(arr, axis=0)  # (1, 128, 128, 3)
     return arr
+
 
 # ---- PREDICTION LOGIC ----
 if uploaded_file:
