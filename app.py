@@ -55,7 +55,6 @@ def preprocess_image(image):
     image = image.convert("RGB")
     image = image.resize((128, 128))
     arr = np.array(image).astype(np.float32) / 255.0
-    arr = np.expand_dims(arr, axis=0)  # (1, 128, 128, 3)
     return arr
 
 
