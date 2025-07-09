@@ -62,7 +62,7 @@ if uploaded_file:
     image = Image.open(uploaded_file)
     st.image(image, caption="🖼 Uploaded MRI Image",use_container_width=True)
 
-    if st.button("🧠 Predict Tumor"):
+    if st.button("🧠 Predict"):
         with st.spinner("Analyzing image..."):
             time.sleep(1)
             processed = preprocess_image(image)
