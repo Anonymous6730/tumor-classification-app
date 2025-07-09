@@ -14,12 +14,12 @@ st.set_page_config(
 import gdown
 from tensorflow import keras
 
-url = "https://drive.google.com/uc?export=download&id=1dEWD5e8Yw9TfYAlZK35dUWKwv7WCq3nX"
-output = 'brain_tumor_cnn.keras'
+url = "https://drive.google.com/uc?export=download&id=1_1HJawPvoqibkFG2TCR0updNfSwWyFOn"
+output = 'brain_tumor_cnn.h5'
 gdown.download(url, output, quiet=False)
 @st.cache_resource
 def load_model():
-    return keras.models.load_model('brain_tumor_cnn.keras')
+    return keras.models.load_model('brain_tumor_cnn.h5')
 
 model = load_model()
 
