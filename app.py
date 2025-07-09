@@ -55,6 +55,7 @@ def preprocess_image(image):
     image = image.convert("L")
     image = image.resize((128, 128))
     arr = np.array(image).astype(np.float32) / 255.0  # Normalization for CNN
+    arr = np.expand_dims(arr, axis=-1)
     return arr
 
 # ---- PREDICTION LOGIC ----
@@ -66,7 +67,7 @@ if uploaded_file:
         with st.spinner("Analyzing image..."):
             time.sleep(1)
             processed = preprocess_image(image)
-            processed = np.expand_dims(processed, axis=0)  # (1, 128, 128, 3)
+            processed = np.expand_dims(processed, axis=0)  # (1, 128, 128, 1)
             proba = model.predict(processed)[0]
             class_index = int(np.argmax(proba))
             confidence = float(np.max(proba)) * 100
