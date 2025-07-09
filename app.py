@@ -14,7 +14,7 @@ st.set_page_config(
 import gdown
 from tensorflow import keras
 
-url = "https://drive.google.com/uc?export=download&id=1Lj0VCVPH_PDJW_M4l5l3mwMIBkGfGBhI"
+url = "https://drive.google.com/uc?export=download&id=1TJIOxbSPXomuKxyAe-TaiARo5A-sOGMW"
 output = 'brain_tumor_cnn_tfdata.h5'
 gdown.download(url, output, quiet=False)
 @st.cache_resource
