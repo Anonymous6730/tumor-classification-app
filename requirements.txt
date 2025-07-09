@@ -2,4 +2,4 @@ kagglehub
 streamlit
 numpy
 gdown
---pre tensorflow
+tensorflow-cpu
