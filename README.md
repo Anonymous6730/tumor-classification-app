@@ -31,7 +31,6 @@ This is a **Streamlit-based web application** that classifies brain tumors from 
 brain_tumor_app/
 ├── app.py                 # Streamlit app
 ├── requirements.txt       # Required libraries
-├── brain_tumor_cnn.keras  # Trained CNN model
 └── README.md              # Project documentation
 ```
 
