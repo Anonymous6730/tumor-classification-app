@@ -66,7 +66,7 @@ if uploaded_file:
     st.markdown(f"**Confidence:** `{confidence*100:.2f}%`")
 
     # Warn if confidence is low
-    if confidence < 0.75:
+    if confidence < 0.60:
         st.warning("⚠️ The model's confidence is relatively low. Please interpret the result cautiously.")
 
     # Additional info
