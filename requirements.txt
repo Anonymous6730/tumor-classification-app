@@ -6,3 +6,4 @@ torch
 torchvision
 numpy
 timm
+tensorflow-cpu
