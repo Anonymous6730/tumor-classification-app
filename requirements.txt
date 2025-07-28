@@ -2,4 +2,7 @@ kagglehub
 streamlit
 numpy
 gdown
-tensorflow-cpu
+torch
+torchvision
+numpy
+timm
