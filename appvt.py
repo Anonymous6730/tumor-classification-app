@@ -6,9 +6,15 @@ import numpy as np
 from torch import nn
 
 # Class names
-CLASS_NAMES = ['glioma', 'meningioma', 'no_tumor', 'pituitary']
+CLASS_NAMES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 # Load model
+import gdown
+from tensorflow import keras
+
+url = "https://drive.google.com/uc?export=download&id=1nVFDaeZSgqixJpSXhm7Kq64SAcxJI1S6"
+output = 'vit_finetuned_on_glioma_v2.pth'
+gdown.download(url, output, quiet=False)
 @st.cache_resource
 def load_model():
     model = timm.create_model('vit_base_patch16_224', pretrained=False, num_classes=4)
