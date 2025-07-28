@@ -10,7 +10,6 @@ CLASS_NAMES = ['glioma', 'meningioma', 'notumor', 'pituitary']
 
 # Load model
 import gdown
-from tensorflow import keras
 
 url = "https://drive.google.com/uc?export=download&id=1nVFDaeZSgqixJpSXhm7Kq64SAcxJI1S6"
 output = 'vit_finetuned_on_glioma_v2.pth'
